@@ -1,0 +1,23 @@
+# dependencies
+/node_modules
+
+# build folder (production)
+/dist
+
+# DLL folder (development)
+/dll
+
+# misc
+.DS_Store
+.
+/reports
+
+# npmjs.com
+npm-debug.log*
+package-lock.json
+
+# yarnpkg.com
+yarn.lock
+yarn-debug.log*
+yarn-error.log*
+.yarnclean
