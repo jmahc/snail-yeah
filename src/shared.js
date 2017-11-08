@@ -20,6 +20,12 @@ const getLights = () =>
     .then(response => response)
     .catch(error => console.log('-=+ ERROR +=-', error))
 
+const getIndividualLight = lightId =>
+  axi
+    .get(`/lights/id:${lightId}`)
+    .then(response => response)
+    .catch(error => console.log('-=+ ERROR +=-', error))
+
 const toggleAllLights = () =>
   axi
     .post('/lights/all/toggle')
@@ -34,6 +40,7 @@ const toggleIndividualLights = lightId =>
 
 export {
   axi,
+  getIndividualLight,
   getLights,
   toggleAllLights,
   toggleGroupLights,
