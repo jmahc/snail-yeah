@@ -1,0 +1,17 @@
+.Lifx-toggle--individual {
+  display: inline-block;
+  margin: 2rem 1rem;
+}
+
+.Lifx-toggle--individual label {
+  margin-right: 0.25rem;
+}
+
+.Lifx-toggle--individual button {
+  outline: none;
+  border: 1px solid #000;
+}
+
+.Lifx-button--green {
+  background-color: green;
+}
