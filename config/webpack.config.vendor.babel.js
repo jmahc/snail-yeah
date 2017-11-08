@@ -1,6 +1,7 @@
 import webpack from 'webpack'
 
 import PATHS from './paths.babel'
+// import pkg from '../package.json'
 
 const vendorFileName = 'vendors.dll.js'
 // NOTE: The library and the plugin's filename MUST match.
@@ -9,6 +10,7 @@ const vendorLibraryName = 'vendors_lib'
 const vendorConfig = {
   context: PATHS.root,
   devtool: '#source-map',
+  // entry: Object.keys(pkg.dependencies),
   entry: [
     // React
     'react',

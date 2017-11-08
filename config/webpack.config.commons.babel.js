@@ -1,6 +1,7 @@
 import merge from 'webpack-merge'
 import path from 'path'
 import webpack from 'webpack'
+import Dotenv from 'dotenv-webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 import { lintJavaScript, loadJavaScript } from './webpack.config.parts.babel'
@@ -14,7 +15,10 @@ const commonsConfig = merge([
     bail: true,
     context: PATHS.app,
     entry: {
-      app: [isProduction ? PATHS.polyfills : 'react-hot-loader/patch', PATHS.app]
+      app: [
+        isProduction ? PATHS.polyfills : 'react-hot-loader/patch',
+        PATHS.app
+      ]
     },
     module: {
       rules: [
@@ -53,6 +57,10 @@ const commonsConfig = merge([
     },
     plugins: [
       new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+      new Dotenv({
+        path: PATHS.env,
+        // path: './.env', // Path to .env file (this is the default)
+      }),
       new HtmlWebpackPlugin({
         chunksSortMode: 'dependency',
         favicon: PATHS.favicon,

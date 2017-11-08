@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import Button from '@/components/Button'
 import Icon from '@/components/Icon'
 
+import Lifx from '@/containers/Lifx'
+
 /*
   - Uncommenting the line below will break the linter.
   - However, if you do include it, you will notice that when building,
@@ -25,6 +27,8 @@ class App extends Component {
         </p>
         <br />
         <Button />
+        <br />
+        <Lifx />
       </div>
     )
   }

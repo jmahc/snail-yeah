@@ -1,6 +1,9 @@
 # dependencies
 /node_modules
 
+# env variables
+.env
+
 # build folder (production)
 /dist
 
@@ -11,6 +14,7 @@
 .DS_Store
 .
 /reports
+/data
 
 # npmjs.com
 npm-debug.log*

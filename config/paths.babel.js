@@ -11,11 +11,13 @@ const PATHS = {
   babelConfig: require(resolvePath('config/babel.config.js')),
   build: resolvePath('dist'),
   dll: resolvePath('dll'),
+  env: resolvePath('.env'),
   favicon: resolvePath('public/favicon.ico'),
   // Uncomment this for `favicons-webpack-plugin`
   // image: resolvePath('public/my-image.png'),
   indexHtml: resolvePath('public/index.ejs'),
   nodeModules: resolvePath('node_modules'),
+  pkg: resolvePath('package.json'),
   polyfills: resolvePath('config/polyfills'),
   postCSS: resolvePath('config/postcss.config.js'),
   publicPath: isProduction ? './' : '/',
